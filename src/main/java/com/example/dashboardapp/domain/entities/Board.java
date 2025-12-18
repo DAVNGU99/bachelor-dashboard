@@ -2,13 +2,16 @@ package com.example.dashboardapp.domain.entities;
 
 
 import jakarta.persistence.*;
+import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "boards")
 @Getter
-@NoArgsConstructor
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Board {
 
     @Id
@@ -18,7 +21,12 @@ public class Board {
     @Column(nullable = false)
     private String title;
 
-   @Column(nullable = false)
+    @Column(nullable = false)
+    private LocalDateTime createdAt;
+
+    public Board(String title){
+        this.title = title;
+    }
 
 
 
