@@ -27,7 +27,7 @@ public class User {
     @Column(nullable = false, length = 100)
     private String name;
 
-    @Column(nullable = false)
+    @Column(nullable = false)B
     private LocalDateTime createdAt;
 
     public User(String email, String password, String name) {
