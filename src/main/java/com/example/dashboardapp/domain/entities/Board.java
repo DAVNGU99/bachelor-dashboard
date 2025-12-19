@@ -28,6 +28,11 @@ public class Board {
         this.title = title;
     }
 
+    @PrePersist
+    protected void onCreate(){
+        this.createdAt = LocalDateTime.now();
+    }
+
 
 
 

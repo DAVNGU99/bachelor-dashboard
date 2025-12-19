@@ -64,7 +64,7 @@ public class KanbanService {
                 column.getKey(),
                 column.getTitle(),
                 column.getPosition(),
-                List.of() // tasks will come next
+                List.of() //K
         );
     }
 }
