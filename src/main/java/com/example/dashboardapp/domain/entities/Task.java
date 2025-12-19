@@ -28,7 +28,7 @@ public class Task {
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "column_id")
-    private BoardColumn column;
+    private BoardColumn boardColumn;
 
 
     @Column(nullable = false)
@@ -38,7 +38,7 @@ public class Task {
         this.title = title;
         this.description = description;
         this.position = position;
-        this.column = column;
+        this.boardColumn = column;
     }
 
     @PrePersist

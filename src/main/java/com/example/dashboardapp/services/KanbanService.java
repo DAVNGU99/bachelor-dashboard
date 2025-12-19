@@ -64,7 +64,7 @@ public class KanbanService {
                 column.getKey(),
                 column.getTitle(),
                 column.getPosition(),
-                List.of() //K
+                List.of() //
         );
     }
 }
