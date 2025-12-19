@@ -31,7 +31,7 @@ public class BoardColumn {
     public BoardColumn(String title, int position, Board board){
         this.title = title;
         this.position = position;
-        this.board = board;T
+        this.board = board;
     }
 
 
