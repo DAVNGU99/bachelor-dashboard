@@ -1,5 +1,8 @@
 package com.example.dashboardapp.dto;
 
+import com.example.dashboardapp.domain.entities.BoardColumn;
+import com.example.dashboardapp.domain.entities.Task;
+
 import java.util.List;
 
 public record ColumnDto(
@@ -8,4 +11,14 @@ public record ColumnDto(
         int position,
         List<TaskDto> tasks
 ) {
+
+    public static ColumnDto from(BoardColumn column, List<Task> tasks){
+        return new ColumnDto(
+                column.getKey(),
+                column.getTitle(),
+                column.getPosition(),
+                tasks.stream().map(TaskDto::from).toList()
+        );
+    }
+
 }

@@ -3,6 +3,7 @@ package com.example.dashboardapp.services;
 
 import com.example.dashboardapp.domain.entities.Board;
 import com.example.dashboardapp.domain.entities.BoardColumn;
+import com.example.dashboardapp.domain.entities.Task;
 import com.example.dashboardapp.dto.BoardDto;
 import com.example.dashboardapp.dto.ColumnDto;
 import com.example.dashboardapp.repositories.BoardColumnRepository;
@@ -47,7 +48,9 @@ public class KanbanService {
         List<ColumnDto>  columnDtos = new ArrayList<>();
 
         for(BoardColumn column : columns){
-            columnDtos.add(toColumnDto(column));
+            List<Task> tasks =
+                    taskRepository.findByBoardColumnIdOrderByPosition(column.getId());
+                columnDtos.add(ColumnDto.from(column,tasks));
 
         }
 
