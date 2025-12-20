@@ -46,6 +46,15 @@ public class Task {
         this.createdAt = LocalDateTime.now();
     }
 
+    public void moveTo(BoardColumn newColumn, int newPosition) {
+        this.boardColumn = newColumn;
+        this.position = newPosition;
+    }
+
+    public void update(String title, String description){
+        this.title = title;
+        this.description = description;
+    }
 
 
 

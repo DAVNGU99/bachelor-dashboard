@@ -7,6 +7,7 @@ import java.util.List;
 
 public interface TaskRepository extends JpaRepository<Task, Long> {
 
+    //orderpositionabyasc
     List<Task> findByBoardColumnIdOrderByPosition(Long columnId);
 
     //task ordering
