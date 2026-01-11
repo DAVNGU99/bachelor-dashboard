@@ -54,6 +54,6 @@ public class DashBoardUserDetails implements UserDetails {
     }
 
     public UUID getId() {
-        user.getId();
+       return user.getId();
     }
 }
