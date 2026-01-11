@@ -64,6 +64,7 @@ public class KanbanService {
 
     private ColumnDto toColumnDto(BoardColumn column) {
         return new ColumnDto(
+                column.getId(),
                 column.getKey(),
                 column.getTitle(),
                 column.getPosition(),

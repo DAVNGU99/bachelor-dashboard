@@ -48,7 +48,7 @@ public class TaskService {
     public void moveTask(Long taskId, Long targetColumnId){
 
         Task task = taskRepository.findById(taskId)
-                .orElseThrow(() -> new IllegalArgumentException("Kunne ikke finne task"));
+                .orElseThrow(() -> new IllegalArgumentException("Finnes ingen task med denne ID"));
 
         BoardColumn targetColumn = boardColumnRepository.findById(targetColumnId)
                 .orElseThrow(() -> new IllegalArgumentException("Kunne ikke finne kolonne"));

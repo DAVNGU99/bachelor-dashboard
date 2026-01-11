@@ -6,6 +6,7 @@ import com.example.dashboardapp.domain.entities.Task;
 import java.util.List;
 
 public record ColumnDto(
+        Long id,
         String key,
         String title,
         int position,
@@ -14,6 +15,7 @@ public record ColumnDto(
 
     public static ColumnDto from(BoardColumn column, List<Task> tasks){
         return new ColumnDto(
+                column.getId(),
                 column.getKey(),
                 column.getTitle(),
                 column.getPosition(),
