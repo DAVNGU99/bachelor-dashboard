@@ -37,7 +37,7 @@ public class TaskService {
     }
 
 
-    @Transactional
+
     public List<Task> getTasksForColumn(Long columnId){
         return taskRepository.findByBoardColumnIdOrderByPosition(columnId);
     }
@@ -74,6 +74,8 @@ public class TaskService {
     public void deleteTask(Long taskId){
         taskRepository.deleteById(taskId);
     }
+
+
 
 
 

@@ -31,6 +31,11 @@ public class MeetingDate {
         this.description = description;
     }
 
+    public void update(LocalDateTime time, String description){
+        this.time = time;
+        this.description = description;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
