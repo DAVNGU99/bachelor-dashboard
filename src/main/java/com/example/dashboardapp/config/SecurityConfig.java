@@ -54,7 +54,11 @@ public class SecurityConfig {
         http
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers(HttpMethod.POST,"/api/auth/**").permitAll()
+
+                        .requestMatchers("/error").permitAll()
                         .anyRequest().authenticated()
+
+
                 )
                 .csrf(csrf -> csrf.disable())
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
