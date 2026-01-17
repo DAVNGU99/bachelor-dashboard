@@ -1,11 +1,9 @@
-package com.example.dashboardapp.domain.entities;
+package com.example.dashboardapp.domain.entities.hourlogger;
 
 import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-
-import java.util.Objects;
 
 @Entity
 @Table(name = "group_members")
@@ -30,10 +28,12 @@ public class GroupMember {
 
     @Override
     public boolean equals(Object o) {
+        if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         GroupMember that = (GroupMember) o;
-        return groupMemberId == that.groupMemberId;
+        return java.util.Objects.equals(groupMemberId, that.groupMemberId);
     }
+
 
     @Override
     public int hashCode() {

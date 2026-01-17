@@ -1,4 +1,4 @@
-package com.example.dashboardapp.domain.entities;
+package com.example.dashboardapp.domain.entities.hourlogger;
 
 import jakarta.persistence.*;
 import lombok.AccessLevel;
@@ -11,7 +11,7 @@ import java.util.Objects;
 @Table(name = "weeks")
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class Weeks {
+public class Week {
 
 
     @Id
@@ -21,7 +21,7 @@ public class Weeks {
     @Column(nullable = false, unique = true)
     private Integer weekNumber;
 
-    public Weeks(Integer weekNumber){
+    public Week(Integer weekNumber){
         this.weekNumber = weekNumber;
     }
 
@@ -33,7 +33,7 @@ public class Weeks {
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
-        Weeks weeks = (Weeks) o;
+        Week weeks = (Week) o;
         return Objects.equals(id, weeks.id);
     }
 
