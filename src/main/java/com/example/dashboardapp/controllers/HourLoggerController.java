@@ -1,6 +1,5 @@
 package com.example.dashboardapp.controllers;
 
-import com.example.dashboardapp.domain.entities.hourlogger.GroupMemberHours;
 import com.example.dashboardapp.dto.hourlogger.GroupMemberHoursDto;
 import com.example.dashboardapp.services.hourlogger.GroupMemberHoursService;
 import org.springframework.data.domain.Page;
