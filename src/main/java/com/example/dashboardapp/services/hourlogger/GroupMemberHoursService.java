@@ -44,10 +44,10 @@ public class GroupMemberHoursService {
 
         GroupMember member = groupMemberRepository.findById(memberId).orElseThrow(() -> new IllegalArgumentException("Kan ikke finne gruppemedlem med denne id"));
 
-        Week week = weekRepository.findById(weekId).orElseThrow(() -> new IllegalArgumentException("Kan ikke finne ukenummer"));
+        Week week = weekRepository.findByWeekNumber(weekId).orElseThrow(() -> new IllegalArgumentException("Kan ikke finne ukenummer"));
 
 
-        MemberWeekHoursId id = new MemberWeekHoursId(memberId, weekId);
+        MemberWeekHoursId id = new MemberWeekHoursId(memberId, week.getId());
 
         GroupMemberHours groupMemberHours = groupMemberHoursRepository.findById(id)
                 .orElseGet(() -> new GroupMemberHours(member, week));
@@ -66,10 +66,10 @@ public class GroupMemberHoursService {
         GroupMember member = groupMemberRepository.findById(memberId)
                 .orElseThrow(() -> new IllegalArgumentException("Kunne ikke finne medlem med denne id"));
 
-        Week week = weekRepository.findById(weekId)
-                .orElseThrow(() -> new IllegalArgumentException("Kan ikke finne ukernummer"));
+        Week week = weekRepository.findByWeekNumber(weekId).orElseThrow(() -> new IllegalArgumentException("Kan ikke finne ukenummer"));
 
-        MemberWeekHoursId id = new MemberWeekHoursId(memberId, weekId);
+
+        MemberWeekHoursId id = new MemberWeekHoursId(memberId, week.getId());
 
         GroupMemberHours groupMemberHours = groupMemberHoursRepository.findById(id)
                 .orElseGet(() -> new GroupMemberHours(member, week));
