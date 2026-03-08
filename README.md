@@ -66,7 +66,7 @@ docker run -p 8080:8080 --env-file .env bachelor-dashboard
 Once running, Swagger UI is available at:
 
 ```
-[http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
+[http://localhost:8080/swagger-ui.html]
 ```
 
 ## Project Structure
