@@ -69,6 +69,7 @@ Once running, Swagger UI is available at:
 [http://localhost:8080/swagger-ui.html]
 ```
 
+
 ## Project Structure
 
 ```
@@ -79,6 +80,7 @@ src/
 │       ├── application.properties
 │       └── db/migration/   # Flyway migrations
 ```
+![Swagger UI schema](https://cdn.discordapp.com/attachments/657297914879672330/1480309502044537003/image.png?ex=69af3528&is=69ade3a8&hm=ab714bbb358a3bb8ffe64d0a3534293c8780c4755c48d9f508d4449812dc4df4)
 
 ## Environment Variables
 
