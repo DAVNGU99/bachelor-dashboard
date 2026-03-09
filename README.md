@@ -84,7 +84,7 @@ src/
 │       └── db/migration/   # Flyway migrations
 ```
 
-##Relational Database Schema
+## Relational Database Schema
 ![Datbase schema](https://cdn.discordapp.com/attachments/657297914879672330/1480642433774522511/image.png?ex=69b06b39&is=69af19b9&hm=e311252c1dc802006e4ad6c83b1f9747edc193f0f5dfabb4e387c1ab32a3dcdb&)
 
 ## Environment Variables
